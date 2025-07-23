@@ -1,0 +1,112 @@
+/* Terminal-inspired styling with a dark mode and neon accents */
+
+:root {
+  --bg: #101010;
+  --fg: #00ff88;
+  --accent: #222;
+  --font: 'Share Tech Mono', monospace;
+  --transition: 0.3s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  letter-spacing: 0.5px;
+}
+
+.header {
+  background: var(--accent);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--fg);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 6px var(--fg);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.search input {
+  padding: 0.5rem;
+  border: 1px solid var(--fg);
+  background: black;
+  color: var(--fg);
+  border-radius: 4px;
+  outline: none;
+  width: 200px;
+}
+
+.search button {
+  padding: 0.5rem 1rem;
+  background: var(--fg);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform var(--transition);
+}
+
+.search button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px var(--fg);
+}
+
+.weather-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#metar-info {
+  background: #121212;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--fg);
+  max-width: 380px;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 0 10px var(--fg);
+  animation: fadeIn 0.4s ease-out;
+}
+
+#metar-info h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 4px var(--fg);
+}
+
+#metar-info p {
+  margin: 0.5rem 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  text-align: center;
+  color: #ff4c4c;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Simple fade-in animation for the weather box */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

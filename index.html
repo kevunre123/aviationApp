@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aviation Weather App</title>
+
+  <!-- I import a retro monospace font to match the computer-themed style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Aviation Weather App</h1>
+    <div class="search">
+      <input
+        type="text"
+        id="icao-input"
+        placeholder="Enter ICAO code (e.g. EGLL)"
+        autocomplete="off"
+      />
+      <button id="search-btn">Search</button>
+    </div>
+  </header>
+
+  <main class="weather-container">
+    <div id="metar-info" class="hidden">
+      <h2 id="station"></h2>
+      <p>🌡️ <strong>Temp:</strong> <span id="temperature"></span>°C</p>
+      <p>💨 <strong>Wind:</strong> <span id="wind"></span></p>
+      <p>👁️ <strong>Visibility:</strong> <span id="visibility"></span></p>
+      <p>☁️ <strong>Clouds:</strong> <span id="clouds"></span></p>
+      <p>🧭 <strong>Pressure:</strong> <span id="pressure"></span> hPa</p>
+      <p>💧 <strong>Humidity:</strong> <span id="humidity"></span>%</p>
+    </div>
+
+    <div id="message"></div>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
